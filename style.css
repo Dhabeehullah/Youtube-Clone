@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    min-height: 65px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.hamburger:hover{
+    padding-bottom: 0.2rem;
+}
+.hamburger .line{
+    background-color: white;
+    height: 1.8px;
+    width: 20px;
+    margin-top: 0.3rem
+}
+.logo{
+    height:30px;
+    width: 120px;
+}
+
+.inputBox{
+    display: flex;
+    position: relative;
+    max-height: 40px;
+    width: 700px;
+}
+.inputBox input{
+    background-color:rgb(30, 30, 30) ;
+    border-style: none;
+    border: 1px solid rgb(72, 72, 72);
+    border-radius: 50px;
+    padding: 1rem 7rem 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    min-width: 100%;
+}
+.search{
+    display: none;
+}
+
+
+.inputBox div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3%;
+    right: 0.1%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(72, 72, 72);
+    height: 39px;
+    width: 100px;
+}
+.inputBox div:hover{
+    background:rgb(127, 124, 124) ;
+    transition: 0.2s;
+}
+.inputBox div img{
+    height:20px;
+    width: 20px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.user a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.user img{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.user a:hover{
+    background: rgb(127, 124, 124);
+    transition: 0.2s;
+}
+/* end of header*/
+
+/* start of side nav*/
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    height:100%;
+    width: 17%;
+    width: 230px;
+    z-index: 1;
+    background-color: black;
+    transition: 0.5s;
+    padding-top: 10px;   
+    overflow-y: auto;
+    cursor: pointer;
+}
+  
+.sidenav div {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.2s;
+    width: 90%;
+    
+}
+.sidenav img{
+    height: 20px;
+    width: 20px;
+}
+.sidenav p{
+    font-size: 0.9rem;
+    color: white;
+    
+}
+.sidenav hr{
+    width: 90%;
+    height: 0.11px;
+    opacity: 0.5;
+    margin:1rem 0;
+}
+.sidenav div:hover {
+    background: rgb(86, 85, 85);
+    border-radius: 8px;
+    transition: 0.1s;
+}
+.slide{
+    width: 0;
+    transition: 0.2s;
+}
+.style-nav{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    transition: 0.2s;
+    
+}
+.style-nav>*{
+    margin-left: 0.8rem;
+    transition: 0.2s;
+}
+.for-p{
+    align-self: start;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.for-desc{
+    font-size: 1rem;
+    opacity: 0.8;
+    align-self: flex-start;
+    margin-left: 2rem;
+
+}
+
+/* end of side nav*/
+
+/*begin of Filters*/
+.filters{
+    position: absolute;
+    left: 250px;
+    top: 80px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background:black;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.left-for-filters{
+    left: 30px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: black;
+    border: 1px solid #f6f4f4;
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.filter-options:hover{
+    color: black;
+    background: white;
+    transition: 0.2s ease-in-out;
+}
+.filter-options.active{
+    color: black;
+    background: white;
+}
+
+/*end of Filters*/
+
+/* video */
+
+.video-container{
+    position: absolute;
+    top: 5%;
+    width: calc(100% - 230px);
+    margin-top: 90px;
+    margin-left: 230px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-gap: 20px 20px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.info h4{
+    color: white;
+    font-weight: lighter;
+}
+
+.video{
+    min-height: 100px;
+    height: auto;
+    transition: 0.2s;
+    
+}
+.video:hover{
+    cursor: pointer;
+}
+
+.thumbnail{
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+.thumbnail:hover{
+    padding: 0.8rem;
+    transition: 0.2s;
+}
+
+.content{
+    max-width: 100%;
+    max-height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.2s;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
+    transition: 0.2s;
+}
+.for-side-mar{
+    transition: 0.3s;
+    margin-left: 0;
+    width: 100%;
+    place-content: center;
+}
+.left-for-filters{
+    transition: 0.4s;
+}
+
+
+@media(max-width:800px){
+    .inputBox{
+        margin: 0 1rem;
+    }
+    
+    .video-container{
+        grid-template-columns: repeat(3,30%);
+        margin-left: 170px;
+        width: calc(100% - 160px);
+        padding-right: 0;
+        transition: 0.4s;
+    }
+    .sidenav {
+        transition: 0.4s;
+        max-width: 180px;
+    }
+    .filters{
+        left: 180px;
+        width: 75%;
+        transition: 0.4s;
+    }
+    .content{
+        padding: 0;
+    }
+    .content h4{
+        font-size: 8px;
+        height: fit-content;
+    }
+    .channel-icon{
+        height: 20px;
+        width: 20px;
+    }
+    .channel-name{
+        font-size: 0.6rem;
+    }
+    
+    .thumbnail:hover{
+        padding: 0.3rem;
+        transition:0.2s ;
+    }
+    .left-for-filters{
+        left: 2%;
+        width: 100%;
+    }
+    .for-side-mar{
+        margin-left:0;
+        width: 100%;
+    }
+    
+}
+@media(max-width:530px){
+    header{
+        max-width: 100%;
+    }
+    .video-container{
+        grid-template-columns: repeat(1,80%);
+        padding:0 ;
+        min-width: 380px;
+        margin-top: 120px;
+        margin-left:0px;
+        grid-gap: 15px 0px;
+        place-content:start;
+    }
+    .video{
+        min-width: 390px;
+    }
+    .thumbnail{
+        max-height: 200px;
+        min-width: 100%;
+
+    }
+    .inputBox{
+        display: none;
+    }
+    .sidenav{
+        top: 150px;
+        position: absolute;
+        width: 0;
+        display: flex;
+        padding-top: 46rem;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+        
+    }
+    
+    .slide{
+        width: 200px;
+        transition: 0.5s;
+        
+    }
+    .filters{
+        min-width: 100%;
+        left: 0;
+        
+    }
+    
+    .search{
+        display: block;
+    }   
+    
+    /*for search-icon*/
+    .hide{
+        display: none;
+        margin-left: 1rem;
+    }
+    .inputBox div{
+        height: 50px;
+    }
+    .channel-name{
+        font-size: 0.8rem;
+    }
+    .channel-icon{
+        height: 35px;
+        width: 35px;
+    }
+    .content h4{
+        font-size: 0.8rem;
+        max-width: 300px;
+        height: fit-content;
+    }
+    .content{   
+        justify-content:flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem;
+        
+    }
+}
